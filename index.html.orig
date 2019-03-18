@@ -7,9 +7,6 @@
 		{% assign name = category[0] %}
 		{% assign posts = category[1] %}
 		{% assign size = posts | size %}
-		{% if name == 'technical-info' %}
-		{% else %}
-
 		<section class="category">
 				<h3>
 					<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ name | replace: "-", " " }}</a>
@@ -25,6 +22,18 @@
 				{% endif %}
 			</ul>
 		</section>
-		{% endif %}
 	{% endfor %}
+	<div>
+		<div>
+			{{ site.posts.path }}
+		</div>
+	{% for post in site.posts %}
+  		{% if post.path contains 'proposals/2017' %}
+     	2017
+		{% endif %}
+		{% if post.path contains '2018' %}
+	     	2018
+  		{% endif %}
+	{% endfor %}  
+	</div>
 </section>
