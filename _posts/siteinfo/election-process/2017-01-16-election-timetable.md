@@ -1,8 +1,8 @@
-ele---
+---
 date: 2017-01-16
-title: Cause
+title: Election timetable
 categories:
-  - election-timetable
+  - election-process
 description: "A not-for-profit theme for Jekyll"
 type: Document
 ---

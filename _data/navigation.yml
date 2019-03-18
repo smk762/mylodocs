@@ -1,6 +1,6 @@
-- name: Technical Info
-  link: /category/technical-info
-- name: Videos
+- name: Getting Started
+  link: /#
+- name: Live Operators
   link: /videos/
-- name: FAQ
+- name: Candidates
   link: /faq/

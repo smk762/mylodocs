@@ -7,7 +7,8 @@
 		{% assign name = category[0] %}
 		{% assign posts = category[1] %}
 		{% assign size = posts | size %}
-		{% if name == 'technical-info' %}
+		{% if name == 'notary-nodes' %}
+		{% elsif name == 'proposals' %}
 		{% else %}
 
 		<section class="category">
