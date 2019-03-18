@@ -1,12 +1,11 @@
----
+ele---
 date: 2017-01-16
-title: Add a credit card
+title: Cause
 categories:
-  - technical-info
-description: "Add a credit card to your account"
+  - election-timetable
+description: "A not-for-profit theme for Jekyll"
 type: Document
 ---
-
 Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.
 
 If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:

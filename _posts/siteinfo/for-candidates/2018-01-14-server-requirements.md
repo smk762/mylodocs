@@ -1,14 +1,20 @@
 ---
-date: 2017-01-15
-title: Why use a static site generator?
-video_id: t3yEhIAOeg8
-description: Introduction to the world of static site generators
-type: Video
+date: 2017-01-14 14:45:05
+title: Server requirements
+video_id: Gc2d-eGSSdQ
+description: Use Jekyll layouts to reduce repetition on your site
 categories:
-  - technical-info
+  - for-candidates
+resources:
+  - name: "Layout documentation"
+    link: https://jekyllrb.com/docs/frontmatter/
+  - name: "Source code"
+    link: https://github.com/CloudCannon/bakery-store/tree/layouts
+type: Video
 set: getting-started
-set_order: 6
+set_order: 5
 ---
+
 Many people don’t use Jekyll for client projects as non-developers would traditionally have to learn HTML, Markdown and Liquid to update content. In this tutorial, we give non-developers an easy way to update Jekyll sites with [CloudCannon](https://cloudcannon.com).
 
 ## What is CloudCannon?

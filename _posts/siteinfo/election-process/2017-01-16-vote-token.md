@@ -1,8 +1,8 @@
 ---
 date: 2017-01-16
-title: Azure
+title: VOTE token
 categories:
-  - technical-info
+  - election-process
 description: "Deploy your Jekyll site to Azure"
 type: Document
 ---
