@@ -1,0 +1,18 @@
+---
+---
+{% assign tmpitems = site.posts | where: "category", "notarynodes" | sort: "title" %}
+
+<!-- START MANUAL SORT /history/ FROM item.path -->
+ <!-- assign blank items array -->
+ <!-- loop through tmpitems already filtered by category -->
+ <!-- unless the path contains /history/ add it to items array-->
+ {% assign items = '' | split: '' %}
+ {% for item in tmpitems %}
+     {% unless item.path contains '/history/' %}
+         {% assign items = items | push: item %}
+     {% endunless %}
+ {% endfor %}
+<h2>Live Operators <span class="count">({{ items | size }})</span></h2>
+
+
+{% include listings.html listings=items %}
