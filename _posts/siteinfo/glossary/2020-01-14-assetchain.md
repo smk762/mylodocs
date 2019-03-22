@@ -9,7 +9,7 @@ type: Document
 
 Assetchains are a Runtime fork of Komodo.
 
-A runtime fork means that the source code of the executable binary remains same, but it can enable a (variety of optional, customisable parameters)[https://komodoplatform.com/new-assetchain-parameters/] on launch, creating an independent blockchain right out of the box.
+A runtime fork means that the source code of the executable binary remains same, but it can enable a [variety of optional, customisable parameters](https://komodoplatform.com/new-assetchain-parameters/) on launch, creating an independent blockchain right out of the box.
 
 * It does not require running the Komodo blockchain.
 * It does not issue a token on upon the Komodo blockchain (like Ethereum tokens), meaning no risks from ecosystem scaling (e.g. cryptokitties).
