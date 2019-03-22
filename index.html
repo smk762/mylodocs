@@ -7,9 +7,9 @@
 		{% assign name = category[0] %}
 		{% assign posts = category[1] %}
 		{% assign size = posts | size %}
-		{% if name == 'notary-nodes' %}
+		{% if name == 'notarynodes' %}
 		{% elsif name == 'proposals' %}
-		{% else %}
+		{% elsif name == 'about' %}
 
 		<section class="category">
 				<h3>
@@ -26,6 +26,75 @@
 				{% endif %}
 			</ul>
 		</section>
+		{% elsif name == 'election-process' %}
+
+		<section class="category">
+				<h3>
+					{{ name | replace: "-", " " }}
+				</h3>
+
+			<ul>
+				{% assign tutorials = posts | sort: "title" %}
+				{% for tutorial in tutorials limit: 4 %}
+					<li><a href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a></li>
+				{% endfor %}
+				{% if size > 4 %}
+					<li><a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ size | minus: 4 }} more...</a></li>
+				{% endif %}
+			</ul>
+		</section>
+		{% elsif name == 'election-results' %}
+
+		<section class="category">
+				<h3>
+					{{ name | replace: "-", " " }}
+				</h3>
+
+			<ul>
+				{% assign tutorials = posts | sort: "title" %}
+				{% for tutorial in tutorials limit: 4 %}
+					<li><a href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a></li>
+				{% endfor %}
+				{% if size > 4 %}
+					<li><a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ size | minus: 4 }} more...</a></li>
+				{% endif %}
+			</ul>
+		</section>
+		{% elsif name == 'for-candidates' %}
+
+		<section class="category">
+				<h3>
+					{{ name | replace: "-", " " }}
+				</h3>
+
+			<ul>
+				{% assign tutorials = posts | sort: "title" %}
+				{% for tutorial in tutorials limit: 4 %}
+					<li><a href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a></li>
+				{% endfor %}
+				{% if size > 4 %}
+					<li><a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ size | minus: 4 }} more...</a></li>
+				{% endif %}
+			</ul>
+		</section>
+		{% elsif name == 'glossary' %}
+
+		<section class="category">
+				<h3>
+					{{ name | replace: "-", " " }}
+				</h3>
+
+			<ul>
+				{% assign tutorials = posts | sort: "title" %}
+				{% for tutorial in tutorials limit: 4 %}
+					<li><a href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a></li>
+				{% endfor %}
+				{% if size > 4 %}
+					<li><a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ size | minus: 4 }} more...</a></li>
+				{% endif %}
+			</ul>
+		</section>
+		{% else %}
 		{% endif %}
 	{% endfor %}
 </section>
