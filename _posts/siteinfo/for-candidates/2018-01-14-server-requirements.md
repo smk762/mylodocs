@@ -4,7 +4,7 @@ title: Server requirements
 description: Use Jekyll layouts to reduce repetition on your site
 categories:
   - for-candidates
-type: Video
+type: Document
 ---
 **Hardware**
 CPU: Xeon/i7
