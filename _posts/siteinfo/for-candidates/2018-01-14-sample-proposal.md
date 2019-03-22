@@ -6,27 +6,20 @@ category: for-candidates
 type: Document
 ---
 
-Copy below information and make your own.
+Copy below information and make your own or copy a good existing document in the [NotaryNodes repo](https://github.com/KomodoPlatform/NotaryNodes).
 
-* Name it in a file with format YYYY-MM-DD-SOMETITLE.md.
-* `2019-03-22-my-awesome-team.md`
-* The file goes in the `_posts/2019/proposals/TEAMNAME/` directory.
+* Name it in a file README.md
+* `README.md`
+* The file goes in the `/notarynodes/TEAMNAME/` directory.
 
-Fork the repo `head-repo` and create your proposal in your `own-repo`, commit it your `own-repo`.  Make a pull request to the `head-repo`.   This is the forking workflow of git.
+Fork the `NotaryNodes` and create your proposal in your `fork`, commit it to your `fork`.  Make a pull request to the `NotaryNodes` repo you forked from.   This is the forking workflow of git - please become used to it, Notary Node Operators use it a lot.
 
 
 ```
----
-date: 2019-03-22
-title: Propsal TEAM
-description: Sample komodo notary node proposal
-category: proposals
-type: Document
----
 ## Name of your team
-Short description
+Short description and maybe your greatest hits achievements.
 
-## Voting details
+## Voting details (addresses)
 
 ## Connection to komodo and campaign
 
