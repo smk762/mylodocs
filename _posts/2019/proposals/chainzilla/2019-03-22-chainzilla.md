@@ -6,7 +6,7 @@ category: proposals
 type: Document
 ---
 
-![chainzilla-banner-01.jpg](chainzilla-banner-01.jpg)
+![chainzilla-banner-01.jpg](https://raw.githubusercontent.com/KomodoPlatform/NotaryNodes/master/notarynodes/chainzilla/chainzilla-banner-01.jpg)
 
 ## BIOGRAPHY ##
 
