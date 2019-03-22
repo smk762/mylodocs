@@ -30,6 +30,9 @@ layout: default
 		
 		<div class="tutorial-main">
 			{{ content }}
+			<script>
+    				document.write('<a href="' + document.referrer + '"><img src="{{ site.url }}/images/backbutton.png" alt="Go Back" /></a>');
+			</script>
 		</div>
 		<div class="tutorial-share">
 			<!-- <a class="modalOpen no-smooth" href="#subscribe">{% include social-icon.html icon="Email" %} Subscribe</a> -->
