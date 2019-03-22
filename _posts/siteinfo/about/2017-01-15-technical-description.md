@@ -1,78 +1,21 @@
 ---
-date: 2017-01-15
+date: 2019-03-22
 title: Technical description
-video_id: 42vlM8bvrtk
-description: Use front matter to set variables on your page
+description: What does a notary node do
+type: Document
 categories:
   - about
-resources:
-  - name: "Front matter documentation"
-    link: https://jekyllrb.com/docs/frontmatter/
-  - name: "Source code"
-    link: https://github.com/CloudCannon/bakery-store/tree/frontmatter
-type: Video
-set: getting-started
-set_order: 3
 ---
-Many people don’t use Jekyll for client projects as non-developers would traditionally have to learn HTML, Markdown and Liquid to update content. In this tutorial, we give non-developers an easy way to update Jekyll sites with [CloudCannon](https://cloudcannon.com).
+A more technical description about what the notary node network does:
+* To understand the role of a Komodo Notary Node, you first need to understand Komodo’s Delayed Proof of Work (dPoW) security mechanism.
+* Essentially, the dPoW security mechanism uses a series of cross-chain notarizations to provide Bitcoin-level security to every dPoW-protected blockchain. Komodo’s Notary Nodes perform the notarizations.
+* Every 10 minutes or so, Komodo’s Notary Node essentially backups each chain on Komodo Platform by recording the block hash, block height, and name of the coin being notarized. This is done by performing a Komodo transaction, and storing the data as a message in “OP_Return”.
+* Then, using the same procedure, Komodo’s Notary Node network writes the same important chain data from the Komodo blockchain onto the Bitcoin blockchain.
+* The transaction ID (txid) of this Bitcoin transaction is then written back to the Komodo blockchain, providing a verifiable link of the chain state history, providing protection against 51% attacks at a cost of approximately 180 BTC per year. 
+* The role of Notary Nodes in the dPoW system is to come to a consensus on the height and hash to be written to the BTC ledger.
+* In order for a notarization to take place, 13 Notary Nodes must agree on the block height and block hash. Then, the notarization transaction needs to be validated by the entire Komodo network, just like any other transaction. 
+* Even in a worst case scenario of Notary Node Operators trying to disrupt the Komodo network, the only power the malicious nodes would have is to withhold a notarization. It would limit the effectiveness of dPoW security but would not cause any real harm.
+* Underperforming Notary Nodes are easily identified and risk losing their seat at the next election. Since the 28 top-performing notary nodes are automatically elected each year, Notary Node Operators are incentivized to run their diligently. 
+* Notary Node teams also contribute to the betterment of Komodo’s ecosystem through core code updates, app/dapp development, representation at events, and community outreach. There is a high level of autonomy regarding methods of contribution, outlined in the proposals of each node standing for election, allowing the voting community to evaluate the merit of each proposal and progress toward achievement of previously-stated goals.
 
-## What is CloudCannon?
-
-CloudCannon is cloud content management system and hosting provider for Jekyll websites. A developer uploads a Jekyll site in the browser or by syncing with GitHub, Bitbucket or Dropbox. CloudCannon then builds the site, hosts it and provides an interface for non-technical users to update content.
-
-## Setup
-
-To begin, we need to create a CloudCannon account and create our first site. Head over to [CloudCannon](https://cloudcannon.com) and click the *Get Started Free* button:
-
-Enter your details into the sign up form:
-
-Once we've signed up we're taken to our dashboard. Click *Create Site*:
-
-Enter a name for the site. I'm going to use the site from the [Converting a static site to Jekyll](/jekyll-casts/converting-a-static-site-to-jekyll/) cast so I'll call it *Creative*:
-
-This creates the site and gives us options for uploading our files. If you'd like to use the same site I'm using you can download it [here](https://github.com/CloudCannon/creative-jekyll-theme/archive/master.zip).
-
-There's a number of ways of getting your files on CloudCannon. To keep things simple we're just going to upload a folder from our local computer. Click on the folder icon. *Note: folder upload is only supported in Chrome*
-
-Navigate to your Jekyll site and click *Upload*:
-
-Once the files upload, CloudCannon builds the site:
-
-We can view the live site by clicking on the _.cloudvent.net_ URL in the sidebar:
-
-## Editables
-
-Next, we need to do is to define areas in our HTML which non-developers can update. These are called [Editable Regions](https://docs.cloudcannon.com/editing/editable-regions/) and are set by adding a class of `editable` to HTML elements.
-
-Open `index.html` in CloudCannon and add a class of `editable` to the `h1` and `p` inside `<div class="header-content-inner">` so it becomes the following:
-
-~~~ html
-<div class="header-content-inner">
-  <h1 class="editable">Your Favorite Source of Free Bootstrap Themes</h1>
-  <hr>
-  <p class="editable">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-  <a href="/about.html" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-</div>
-~~~
-
-## Client Access
-
-Now the site is ready for our non-developer to update. We'll set up [Client Sharing](https://docs.cloudcannon.com/sharing/client-sharing/) which allows our client to update their site without having to create an account. Go to the Site Settings / Client Sharing section and set a password for your client.
-
-Our non-developer can view their live site at your-site.cloudvent.net (or you can set up a custom domain). To update their site they just add `/update` to the URL and enter the password we set earlier.
-
-## The Client Workflow
-
-Once the client logs in they see their site with colored boxes highlighting the editable regions. The client can update content directly inline by clicking on text:
-
-By clicking _Collections_ in the sidebar the client can manage their blog posts:
-
-Editing posts happens in the [Content Editor](https://docs.cloudcannon.com/editing/content-editor/) which is a rich text editor for Markdown. The client can also manage all the front matter data on the page using an easy-to-use editor:
-
-Or we can use the [Visual Editor](https://docs.cloudcannon.com/editing/visual-editor/) to update posts:
-
-The client can also update collection items using the same editor. In this example there's no body content and only front matter so we've made the front matter editor full screen:
-
-If we have GitHub, Bitbucket or Dropbox connected to the site, all changes the client makes are pushed back to the storage provider.
-
-Now the client can update all the content and hasn't had to learn HTML, Liquid or Markdown. This gives a small taste of what you can achieve on CloudCannon. [Sign up free](https://app.cloudcannon.com/users/sign_up) and make your Jekyll site client editable.
+It is important to note that Notary Nodes are not Master Nodes. They do not have the power to refuse or change transactions. Notary Nodes are not intended to be purchased as an investment without ongoing maintenance and ecosystem contribution.
