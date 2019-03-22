@@ -1,8 +1,8 @@
 # ----
 # Site
 
-title: Base
-url: "https://orange-ape.cloudvent.net/"
+title: Komodo Election
+url: "https://komodoelection.com/"
 baseurl:
 google_analytics_key:
 disqus_shortname:
@@ -10,7 +10,7 @@ newsletter_action:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Knowledge base template for Jekyll.
+description: Komodo election for notary nodes
 author:
   name:
   email:
@@ -18,7 +18,7 @@ author:
 social:
   name: Base Template
   links:
-    - https://github.com/CloudCannon/base-jekyll-template
+    - https://github.com/election-sites/komodoelection.com
 
 # -----
 # Build
